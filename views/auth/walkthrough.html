@@ -1,0 +1,35 @@
+<ion-view class="walkthrough-view" cache-view="false">
+	<ion-content scroll="false">
+		<div class="top-content row">
+			<ion-slide-box delegate-handle="walkthrough-slider" show-pager="true">
+				<ion-slide>
+					<div class="row slide-content">
+						<div class="col">
+							<h3 class="slide-h">Découvrez toutes les fonctionnalités de beAppli</h3>
+							<img class="slide-image" ng-src="img/wordpress_logo_white.png"/>
+							<p class="slide-p">
+								Super easy to configure, try it now!
+							</p>
+						</div>
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<div class="row slide-content">
+						<div class="col">
+							<h3 class="slide-h">All under a beautifull design</h3>
+							<img class="slide-image" ng-src="img/ionic_logo_white.png"/>
+						</div>
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+		<div class="bottom-content row">
+			<div class="col col-center">
+				<a class="login button button-block" ui-sref="login" data-i18n="app.login-connect"></a>
+			</div>
+			<div class="col col-center">
+				<a class="sign-up button button-block" ui-sref="register" data-i18n="app.login-register"></a>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

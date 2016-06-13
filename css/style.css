@@ -1,0 +1,131 @@
+/* Empty. Add your own CSS if you like */
+.wp-search .search-results-wrapper {
+	opacity: 1;
+}
+.search-results-container {
+	background-color: #2b2b2b;
+	opacity: 1;
+}
+/* Change menu style */
+.main-menu ion-content {
+	background-color: #1b1b1b;
+	background-image: url("../img/bubble.png");
+	background-position:left bottom;
+}
+.main-menu ion-item.item .item-content,
+.main-menu .heading-item .heading-action {
+	padding: 14px 14px 14px 60px;
+}
+/* Post card */
+.home-view .card-button.comments,
+.category-view .card-button.comments,
+.post-view .post-actions .comment-count {
+  float: left;
+  padding: 0px;
+  font-size: 24px;
+  margin-top: -4px;
+	color: #444444;
+}
+.home-view .card-button.bookmark,
+.category-view .card-button.bookmark {
+  float: right;
+  padding: 0px;
+  font-size: 24px;
+  margin-top: -4px;
+}
+.home-view .card-button.share,
+.category-view .card-button.share,
+.post-view .post-actions .share {
+  float: right;
+  padding: 0px;
+  font-size: 22px;
+  margin-top: -2px;
+  margin-left: 20px;
+}
+.home-view .card-button.share i,
+.category-view .card-button.share i {
+	padding: 4px;
+}
+.home-view .card-footer, .category-view .card-footer {
+	height: 50px;
+}
+.post-view .post-actions {
+	height: 50px;
+}
+.multi-level-push-menu .mp-menu .category-item-container {
+	height: 50px;
+}
+.multi-level-push-menu .mp-menu .category-details {
+	height:50px;
+	padding: 10px 0 5px 15px;
+}
+.multi-level-push-menu .mp-menu .menu-heading .title-text {
+	height: 130px;
+	line-height: 130px;
+}
+.multi-level-push-menu .mp-menu .category-item-container:before {
+	height: 40px;
+	line-height: 40px;
+	padding: 5px 0 5px 10px;
+}
+.multi-level-push-menu .mp-menu .category-details .category-title:after {
+	content: none;
+}
+.multi-level-push-menu .mp-menu .menu-heading.has-previous .title-aux {
+	color: rgba(230, 230, 230, 0.8);
+}
+.bookmarks-view .bookmark-item .remove-button i {
+	padding: 0 10px 0 10px;
+	color: #FFFFFF;
+}
+/* integration md-message et md-dialog */
+
+.md-bottom-sheet-list-item {
+  margin: 0;
+  font-size: inherit;
+  height: inherit;
+  text-align: left;
+  text-transform: none;
+  width: 100%;
+  white-space: normal;
+  padding: 5px 16px 0; }
+  .md-bottom-sheet-list-item i {
+    margin-right: 32px;
+    margin-left: 22px;
+    font-size: 22px;
+    color: gray; }
+  .md-bottom-sheet-list-item span {
+    text-transform: none;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal; }
+
+.md-bottom-sheet-header {
+  font-size: 14px !important;
+  margin: 34px 0 10px 8px !important;
+  font-weight: 500 !important; }
+
+.dialog-action-btn {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 10px;
+  cursor: pointer; }
+
+/* */
+.home-view .post-card,
+.category-view .post-card {
+  padding: 5px 0px 5px 0px;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 1px 2px #f2f2f2;
+  background: #FFFFFF;
+  border-radius: 3px;
+}
+/* ion icon on show/hide password */
+.register-view .toggle-view-anchor *, .login-view .toggle-view-anchor *, .forgot-password-view .toggle-view-anchor * {
+	font-size: 30px;
+}

@@ -1,0 +1,41 @@
+<ion-view class="settings-view">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-nav-title>
+		<span data-i18n="app.settings-title"></span>
+	</ion-nav-title>
+	<ion-content>
+
+			<div class="item item-divider" data-i18n="app.settings-notifications"></div>
+      <ion-toggle ng-model="option1" ng-change="pushOption1()" toggle-class="toggle-dark"><span data-i18n="app.settings-bookmark-delete-confirm"></span></ion-toggle>
+			<ion-toggle ng-model="sendLocation" toggle-class="toggle-dark"><span data-i18n="app.settings-option-2"></span></ion-toggle>
+			<div class="item item-divider" data-i18n="app.settings-options"></div>
+			<a class="item option" ng-controller="EmailSenderCtrl" ng-click="sendFeedback()">
+				<i class="icon ion-chatbox dark"></i>
+				<span class="title" data-i18n="app.settings-recommend"></span>
+			</a>
+			<a class="item option" ng-controller="RateAppCtrl" ng-click="rateApp()">
+				<i class="icon ion-heart assertive"></i>
+				<span class="title" data-i18n="app.settings-rate"></span>
+			</a>
+			<!--<a class="item option" ng-controller="AdmobCtrl" ng-click="manageAdMob()">
+				<i class="icon ion-social-usd"></i>
+				<span class="title">AdMob</span>
+			</a>
+			<a class="item option" ng-controller="iAdCtrl" ng-click="manageiAd()">
+				<i class="icon ion-social-usd"></i>
+				<span class="title">iAd</span>
+			</a>-->
+			<div class="item item-divider" data-i18n="app.settings-infos"></div>
+			<a class="item" href="" ng-click="showTerms()" data-i18n="app.tos-title"></a>
+			<a class="item" href="" ng-click="showFAQS()" data-i18n="app.faq-title"></a>
+			<a class="item" href="" ng-click="showCredits()" data-i18n="app.about-title"></a>
+			<div class="item item-divider" data-i18n="app.settings-account"></div>
+			<a class="item option" ng-click="showLogOutMenu()">
+				<i class="icon ion-power"></i>
+				<span class="title" data-i18n="app.login-sign-out"></span>
+			</a>
+		</ul>
+	</ion-content>
+</ion-view>

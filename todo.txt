@@ -1,0 +1,36 @@
+TODO BEAPPLI 04/05/2016
+
+
+=====================
+
+
+=====================
+STATUSBAR
+
+-> bouge au démarrage de l'app
+https://github.com/phonegap-build/StatusBarPlugin
+=====================
+
+TAGS
+
+=====================
+
+SIGNUP
+C:\wamp\graphicriver-13534251-hexagon-mobile-ui-kit\Hexagon_PSD\Hexagon_PSD\02 Sign In
+
+-> sign with facebook
+-> sign with Tweeter
+
+=====================
+
+FAVORIS
+- mettre une icone poubelle à la place de EFFACER
+
+
+
+*********************************
+
+REFERENTIELS
+
+http://qnimate.com/category/cordova/
+

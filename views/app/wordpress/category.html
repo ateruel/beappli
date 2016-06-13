@@ -1,0 +1,14 @@
+<ion-view class="category-view">
+	<ion-nav-title>
+		<span><i class="icon ion-pricetags"></i> {{category.title}}</span>
+	</ion-nav-title>
+	<ion-content>
+		<ion-refresher pulling-text="" on-refresh="doRefresh()">
+		</ion-refresher>
+		<ion-list>
+			<ion-item post-card ng-repeat="post in posts" class="post-card"></ion-item>
+		</ion-list>
+		<ion-infinite-scroll ng-if="moreDataCanBeLoaded()" on-infinite="loadMoreData()" distance="1%" icon="ion-loading-c">
+		</ion-infinite-scroll>
+	</ion-content>
+</ion-view>

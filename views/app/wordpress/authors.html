@@ -1,0 +1,13 @@
+<ion-view class="authors-view">
+	<ion-nav-title>
+		<span data-i18n="app.authors-title" data-name="<i class='badge badge-calm'>{{count}}</i>"></span>
+	</ion-nav-title>
+	<ion-content>
+		<ion-list>
+			<ion-item auto-list-divider auto-list-divider-value="{{author.name}}" ng-repeat="author in authors" href="#/app/author/{{author.name}}/{{author.id}}">
+		    {{author.name}}
+		    <i class="badge badge-assertive">{{author.post_count}}</i>
+		  </ion-item >
+		</ion-list>
+	</ion-content>
+</ion-view>

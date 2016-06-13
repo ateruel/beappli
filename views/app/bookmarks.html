@@ -1,0 +1,26 @@
+<ion-view class="bookmarks-view">
+	<ion-nav-title>
+		<span data-i18n="app.bookmarks-title" data-name="<i class='badge badge-calm'>{{count}}</i>"></span>
+	</ion-nav-title>
+	<ion-content>
+		<div class="row bookmarks-container">
+			<div ng-if="bookmarks.length == 0" class="col col-center">
+				<div class="empty-results">
+					<i class="icon ion-heart"></i>
+					<h3 class="no-bookmarks" data-i18n="app.bookmarks-no-bookmark"></h3>
+				</div>
+			</div>
+			<div ng-if="bookmarks.length > 0" class="col">
+				<ion-list class="bookmarks-list" can-swipe="true">
+					<ion-item class="bookmark-item" ng-repeat="bookmark in bookmarks">
+						<a ui-sref="app.post({postId : bookmark.id})">
+							<h2 class="post-title" ng-bind-html="bookmark.title | rawHtml"></h2>
+							<p class="post-date"><span data-i18n="app.posted-on"></span><span am-time-ago="bookmark.date"></span></p>
+						</a>
+						<ion-option-button class="remove-button" ng-click="remove(bookmark.id, $event)"><i class="icon ion-trash-b"></i></ion-option-button>
+					</ion-item>
+				</ion-list>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

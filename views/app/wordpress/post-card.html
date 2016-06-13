@@ -1,0 +1,19 @@
+<div class="card-header" ui-sref="app.post({postId :post.id})">
+	<h1 ng-bind-html="post.title | rawHtml"></h1>
+	<h2><span data-i18n="app.posted-on"></span><span am-time-ago="post.date"></span> <span data-i18n="app.posted-by"></span><span ng-bind-html="post.author.name | rawHtml"></span></h2>
+</div>
+<div class="card-content-outer" ui-sref="app.post({postId :post.id})" post-content>
+	<div class="card-content" dynamic-anchor-fix ng-bind-html="post.content | rawHtml"></div>
+</div>
+<div class="card-footer">
+	<!--<a class="card-button primary" ui-sref="app.post({postId :post.id})" data-i18n="app.post-read-more"></a>-->
+	<a ng-show="post.comment_count > 0" class="card-button comments" ui-sref="app.post({postId :post.id})">
+		<i class="icon ion-chatbubble-working"></i>{{post.comment_count}}
+	</a>
+	<a class="card-button secondary share" ng-click="sharePost(post.url)">
+		<i class="icon ion-android-share-alt"></i>
+	</a>
+	<a class="card-button secondary bookmark" ng-click="bookmarkPost(post)">
+		<i class="icon ion-heart"></i>
+	</a>
+</div>

@@ -1,0 +1,15 @@
+<ion-view class="category-view">
+	<ion-nav-title>
+		<span data-i18n="app.tags-title" data-name="<i class='badge badge-calm'>{{count}}</i>"></span>
+	</ion-nav-title>
+	<ion-content>
+		<ion-refresher pulling-text="" on-refresh="doRefresh()">
+		</ion-refresher>
+		<ion-list ng-show="tags.lengh>0">
+			<ion-item ng-repeat="tag in tags" auto-list-divider auto-list-divider-value="{{tag.title}}" href="#/app/tag/{{tag.title}}/{{tag.id}}">
+		    {{tag.title}}
+		  <i class="badge badge-assertive">{{tag.post_count}}</i>
+		  </ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view class="login-view">
+	<ion-nav-bar class="view-navigation">
+		<ion-nav-back-button>
+		</ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content class="padding">
+		<div class="row form-heading">
+			<div class="col col-center">
+				<h1 class="form-title" data-i18n="app.login-welcome"></h1>
+			</div>
+		</div>
+		<div class="row form-wrapper">
+			<div class="col">
+				<form name="login_form" class="" novalidate>
+					<div class="list input-fields">
+						<label class="item item-input">
+							<input type="text" name="user_name" data-i18n-attr="{placeholder: 'app.login-username'}" ng-model="user.userName" required>
+						</label>
+						<label class="item item-input" show-hide-container>
+							<input type="password" name="password" data-i18n-attr="{placeholder: 'app.login-password'}" ng-model="user.password" required show-hide-input>
+						</label>
+						<button type="submit" class="login button button-block" ng-click="doLogin()" ng-disabled="login_form.$invalid" data-i18n="app.login-connect"></button>
+						<p ng-show="error" class="message error">{{error}}</p>
+					</div>
+				</form>
+				<div class="alternative-actions">
+					<a class="forgot-password button button-small button-clear" ui-sref="forgot_password" data-i18n="app.login-reset"></a>
+					<a class="sign-up button button-small button-clear" ui-sref="register" data-i18n="app.login-register-not"></a>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

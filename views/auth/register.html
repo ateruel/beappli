@@ -1,0 +1,35 @@
+<ion-view class="register-view" cache-view="false">
+	<ion-nav-bar class="view-navigation">
+		<ion-nav-back-button>
+		</ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content class="padding">
+		<div class="row form-heading">
+			<div class="col col-center">
+				<h1 class="form-title" data-i18n="app.login-register-title"></h1>
+			</div>
+		</div>
+		<div class="row form-wrapper">
+			<div class="col">
+				<form name="signup_form" class="" novalidate>
+					<div class="list input-fields">
+						<label class="item item-input">
+							<input type="text" name="user_name" data-i18n-attr="{placeholder: 'app.login-username'}" ng-model="user.userName" required>
+						</label>
+						<label class="item item-input">
+							<input type="text" name="display_name" data-i18n-attr="{placeholder: 'app.login-display-name'}" ng-model="user.displayName" required>
+						</label>
+						<label class="item item-input">
+							<input type="email" name="email" data-i18n-attr="{placeholder: 'app.login-email'}" ng-model="user.email" required>
+						</label>
+						<label class="item item-input" show-hide-container>
+							<input type="password" name="password"  data-i18n-attr="{placeholder: 'app.login-password'}" ng-model="user.password" required show-hide-input>
+						</label>
+						<button type="submit" class="register button button-block" data-i18n="app.login-send" ng-click="doRegister()" ng-disabled="signup_form.$invalid"></button>
+						<p ng-show="error" class="message error">{{error}}</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

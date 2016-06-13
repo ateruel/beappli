@@ -1,0 +1,70 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content class="post-size-14px">
+		<ion-nav-bar class="bar app-top-bar">
+			<ion-nav-back-button>
+			</ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+				</button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-search" menu-toggle="right">
+				</button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="menuContent"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu class="main-menu" side="left" width="230">
+		<ion-content>
+			<ion-list>
+				<ion-item class="heading-item item" nav-clear menu-close ui-sref="app.settings">
+					<pre-img ratio="_1_1">
+						<img class="user-image" ng-src="{{user.avatar}}" spinner-on-load>
+					</pre-img>
+					<div class="heading-bg">
+					</div>
+					<div class="heading-action item-icon-left">
+						<i class="icon ion-gear-a"></i>
+						<h2 class="greeting" data-i18n="app.settings-title"></h2>
+					</div>
+				</ion-item>
+				<ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.home">
+					<i class="icon ion-quote"></i>
+					<h2 class="menu-text" data-i18n="app.posts-title"></h2>
+				</ion-item>
+				<ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.tags">
+					<i class="icon ion-pricetag"></i>
+					<h2 class="menu-text" data-i18n="app.tags-title" data-name=""></h2>
+				</ion-item>
+				<ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.authors">
+					<i class="icon ion-android-person"></i>
+					<h2 class="menu-text" data-i18n="app.authors-title" data-name=""></h2>
+				</ion-item>
+				<!--<ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.categories">
+					<i class="icon ion-pricetags"></i>
+					<h2 class="menu-text">Catégories</h2>
+				</ion-item>-->
+			 <ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.bookmarks">
+					<i class="icon ion-heart"></i>
+					<h2 class="menu-text" data-i18n="app.bookmarks-title" data-name=""></h2>
+				</ion-item>
+				<ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.page">
+					<i class="icon ion-social-wordpress"></i>
+					<h2 class="menu-text">Page</h2>
+				</ion-item>
+				<!--<ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.contact">
+					<i class="icon ion-location"></i>
+					<h2 class="menu-text">Contact</h2>
+				</ion-item>-->
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+
+	<ion-side-menu class="multi-level-push-menu" side="right" ng-controller="PushMenuCtrl">
+		<ion-content has-bouncing="false" scroll="false">
+			<wp-search>
+			</wp-search>
+			<push-menu menu="menu"></push-menu>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>
